@@ -29,4 +29,11 @@ app.get("/api/notes", async (req, res) => {
   res.json({ data });
 });
 
+app.get("/api/notes/:id", async (req, res) => {
+  const { id } = req.params;
+  const data = await notes.read(id);
+  res.json({ data: data ? data : [] });
+});
+
+
 
