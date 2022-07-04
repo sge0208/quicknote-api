@@ -1,7 +1,6 @@
 {
   "name": "qnote-api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server",
@@ -16,5 +15,15 @@
     "faker": "^5.5.3",
     "mongoose": "^6.4.2",
     "uuid": "^8.3.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sge0208/quicknote-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sge0208/quicknote-api/issues"
+  },
+  "homepage": "https://github.com/sge0208/quicknote-api#readme",
+  "description": ""
 }
