@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const faker = require("faker");
 
 // TODO replace <password> with the password for quicknote-admin
 const URI = `mongodb+srv://quicknote-admin:11100208g@cluster0.jpi1j0w.mongodb.net/?retryWrites=true&w=majority`;
@@ -16,3 +17,17 @@ const NoteSchema = new mongoose.Schema({
     title: { type: String },
     text: { type: String },
 });
+
+const Note = mongoose.model("Note", NoteSchema);
+
+Note.create(
+    {
+        title: faker.lorem.sentence(),
+        text: faker.lorem.paragraph(),
+    },
+    (err, note) => {
+        console.log(err ? err : note);
+    }
+);
+
+
