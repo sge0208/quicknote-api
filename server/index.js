@@ -46,6 +46,29 @@ app.post("/api/notes", async (req, res) => {
   }
 });
 
+app.delete("/api/notes/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const data = await notes.delete(id);
+    res.json({ data });
+  } catch (err) {
+    res.status(err.status).json({ message: err.message });
+  }
+});
+
+app.put("/api/notes/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { title, text } = req.body;
+    const data = await notes.update(id, { title, text });
+    res.json({ data });
+  } catch (err) {
+    res.status(err.status).json({ message: err.message });
+  }
+});
+
+
+
 
 
 
