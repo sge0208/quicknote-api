@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-// TODO replace <password> with the password for quicknote-admin
-const URI = `mongodb+srv://quicknote-admin:11100208g@cluster0.jpi1j0w.mongodb.net/?retryWrites=true&w=majority`;
+
+const URI = process.env.DB_URI;
 
 async function connect() {
     try {
