@@ -18,7 +18,6 @@ async function createSampleNotes() {
 }
 
 createSampleNotes();
-createSampleNotes();
-createSampleNotes();
+
 
 
