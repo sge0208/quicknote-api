@@ -22,3 +22,9 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Express app listening at port: http://localhost:${port}/`);
 });
+
+app.get("/api/notes", async (req, res) => {
+  const data = await notes.readAll();
+  res.json({ data });
+});
+
